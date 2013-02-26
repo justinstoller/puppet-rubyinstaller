@@ -27,7 +27,7 @@ define rubyinstaller::installation(
   }
 
   exec { "Extract Ruby ${version}":
-    command => "7za x -o${install_dir} ${on_disk}",
+    command => "7za.bat x -o${install_dir} ${on_disk}",
     creates => $install_dir,
     path    => 'C:\Chocolatey\bin',
   }
