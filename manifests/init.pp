@@ -38,7 +38,7 @@
 class rubyinstaller(
   $version     =  19,
   $source      =  undef,
-  $destination = 'C:\packages'
+  $destination = 'C:\packages',
   $type        = 'exe'
 ) {
 
