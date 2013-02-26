@@ -13,7 +13,7 @@ define rubyinstaller::installation(
       $install_dir = 'C:\Ruby193'
     } elsif $version =~ /18/ {
       $pkg_name = "ruby-1.8.7-p371-i386-mingw32.7z"
-      $install_dir = 'C:\Ruby'
+      $install_dir = 'C:\Ruby187'
     }
     $location = "puppet:///modules/rubyinstaller/${pkg_name}"
   }
@@ -27,7 +27,7 @@ define rubyinstaller::installation(
   }
 
   exec { "Extract Ruby ${version}":
-    command => "7za x ${on_disk} -o ${install_dir}",
+    command => "7za x -o${install_dir} ${on_disk}",
     creates => $install_dir,
     path    => 'C:\Chocolatey\bin',
   }
