@@ -32,5 +32,3 @@ define rubyinstaller::installation(
     path    => 'C:\Chocolatey\bin',
   }
 }
-
-}
